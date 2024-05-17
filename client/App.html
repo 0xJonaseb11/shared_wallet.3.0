@@ -6,10 +6,11 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Calyptus</title>
    <script src="index.js"></script>
+   <script src="abi.js"></script>
    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
 </head>
 <body>
-   <button>Connect Wallet</button>
+   <button onclick="connect(); return false" >Connect Wallet</button>
    <p id="wallet-address"></p>
  
    <h4>Pending Allowance : <span id="pending-allowance"></span></h4>
