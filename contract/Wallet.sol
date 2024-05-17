@@ -7,7 +7,7 @@ contract Wallet {
     address public  owner;
     mapping (address => User) public users;
 
-    struct Users {
+    struct User {
         address userAddress;
         uint allowance;
         uint validity;
@@ -38,7 +38,7 @@ contract Wallet {
     // renew Allowance
     function renewAllowance(address _user, uint _allowance, uint _timeLimit) public onlyOwner {
         uint validity = block.timestamp + _timeLimit;
-        users[_user] = User(_user, _allowance, _validity);
+        users[_user] = User(_user, _allowance, validity);
 
         // emit event to indicate renewal of allowance
         emit AllowanceRenewed(_user, _allowance, _timeLimit);
@@ -61,6 +61,6 @@ contract Wallet {
         _receiver.transfer(_amount);
 
         // trigger event for coins spent
-        emit CoinsSpent(_amount, _receiver);
+        emit CoinsSpent(_receiver, _amount);
     }
 }
