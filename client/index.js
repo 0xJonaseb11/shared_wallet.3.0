@@ -1,5 +1,5 @@
-const { ethers } = require("ethers");
-const abi = require("./abi")
+import { ethers } from "https://cdn.ethers.io/lib/ethers-5.2.esm.min.js";
+import abi from "./abi.js";
 
 const contractAddress = "0x4a9C121080f6D9250Fc0143f41B595fD172E31bfD";
 
@@ -34,4 +34,5 @@ const connect = async () => {
     }
 };
 
+// Attach the connect function to the window object to ensure it's accessible globally
 window.connect = connect;
