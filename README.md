@@ -15,6 +15,26 @@ _Please note that it is important to update the state first before making the tr
 
 ### Getting started
 
+`clone repo`
+
+```sh
+git clone https://github.com/0xJonaseb11/shared_wallet.3.0.git
+```
+
+`Install needed dependencies`
+
+```sh
+cd client
+npm install
+```
+
+`Smart contract part`
+
+```sh
+# Head to remix and deploy contract
+# copy contract address to use it in `index.js`
+# Start server and interact with the dapp - shared wallet
+```
 -------------------
 
 @0xJonaseb11
