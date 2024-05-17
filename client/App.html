@@ -3,20 +3,20 @@
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Calyptus</title>
-   <script src="index.js"></script>
-   <script src="abi.js"></script>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Shared wallet</title>
    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+   <script src="abi.js"></script>
+   <script src="index.js"></script>
 </head>
 <body>
-   <button onclick="connect(); return false" >Connect Wallet</button>
+   <button onclick="connect(); return false;">Connect Wallet</button>
    <p id="wallet-address"></p>
  
    <h4>Pending Allowance : <span id="pending-allowance"></span></h4>
    <form autoComplete="off">
-  <input id="receiver" type="text" placeholder="Enter Receiver Address..."><br><br>
- <input id="amount" type="number" placeholder="Enter Amount..."><br><br>
+      <input id="receiver" type="text" placeholder="Enter Receiver Address..."><br><br>
+      <input id="amount" type="number" placeholder="Enter Amount..."><br><br>
       <button type="submit">SEND</button>
       <p id="sending"></p><br><br>  
    </form>
@@ -26,10 +26,10 @@
    <h3>For Admin Use Only</h3>
    <h4>Wallet Balance : <span id="wallet-balance"></span></h4>
    <form autoComplete="off">
-  <input id="user" type="text" placeholder="Enter User Address..."><br><br>
-  <input id="allowance" type="number" placeholder="Enter Allowance..."><br><br>
-       <button type="submit">SET</button>
-       <p id="processing"></p>
+      <input id="user" type="text" placeholder="Enter User Address..."><br><br>
+      <input id="allowance" type="number" placeholder="Enter Allowance..."><br><br>
+      <button type="submit">SET</button>
+      <p id="processing"></p>
    </form>
 </body>
 </html>
