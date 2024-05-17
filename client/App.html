@@ -25,11 +25,13 @@
  
    <h3>For Admin Use Only</h3>
    <h4>Wallet Balance : <span id="wallet-balance"></span></h4>
-   <form autoComplete="off">
+   <form autocomplete="off" onsubmit="renew();return false;">
+      <form autocomplete="off" onsubmit="spend();return false;">      
       <input id="user" type="text" placeholder="Enter User Address..."><br><br>
       <input id="allowance" type="number" placeholder="Enter Allowance..."><br><br>
       <button type="submit">SET</button>
       <p id="processing"></p>
+   </form>
    </form>
 </body>
 </html>

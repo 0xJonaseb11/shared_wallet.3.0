@@ -36,3 +36,20 @@ const connect = async () => {
 
 // Attach the connect function to the window object to ensure it's accessible globally
 window.connect = connect;
+
+const renew = async () => {
+    const account = document.getElementById("user").value;
+    const amount = document.getElementById("allowance").value;
+    var tx = await walletContract.renewAllowance(account, amount, 86400);
+    await tx.wait();
+  };
+  renew();
+
+  const spend = async () => {
+    const account = document.getElementById("receiver").value;
+    const amount = document.getElementById("amount").value;
+    var tx = await walletContract.spendCoins(account, amount);
+    await tx.wait();
+  };
+
+  spend();
