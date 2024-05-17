@@ -1,4 +1,4 @@
-import { ethers } from "https://cdn.ethers.io/lib/ethers-5.2.esm.min.js";
+import { ethers } from "ethers";
 import abi from "./abi.js";
 
 const contractAddress = "0x4a9C121080f6D9250Fc0143f41B595fD172E31bfD";
